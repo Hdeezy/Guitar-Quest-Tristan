@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#EFE3C2">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Tristan · Quest Card · Lesson 0 → I</title>
+<!-- v0.7.1 — atlas: WI, Songsterr, UG, Spotify, TIAB-UG, TIAB-YT, TrueFire, GuitarTuna -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment: #EFE3C2;
+    --parchment-light: #F4EAD0;
+    --parchment-deep: #E5D5A8;
+    --parchment-darker: #D4C190;
+    --ink: #2E1F0F;
+    --ink-soft: #5A4423;
+    --ink-faded: #8A7048;
+    --pine: #1F3829;
+    --pine-deep: #142319;
+    --pine-soft: #466253;
+    --burgundy: #7A2E1E;
+    --burgundy-deep: #4F1B11;
+    --burgundy-soft: #9A4530;
+    --gold: #B89348;
+    --gold-deep: #8E6F2E;
+    --gold-bright: #D4B45F;
+    --rule: #B8A574;
+    --rule-soft: #D4C190;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: linear-gradient(180deg, #DECBA0 0%, #EFE3C2 25%, #EFE3C2 100%);
+    color: var(--ink);
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    line-height: 1.55;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    padding: 0;
+  }
+  .app {
+    max-width: 440px;
+    margin: 0 auto;
+    background: var(--parchment);
+    min-height: 100vh;
+    box-shadow: 0 0 60px rgba(46, 31, 15, 0.12);
+    padding: 0 0 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Paper grain texture */
+  .app::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      radial-gradient(circle at 18% 20%, rgba(184,138,72,0.08) 0%, transparent 35%),
+      radial-gradient(circle at 82% 75%, rgba(122,46,30,0.06) 0%, transparent 40%),
+      radial-gradient(circle at 45% 60%, rgba(31,56,41,0.04) 0%, transparent 50%);
+    z-index: 0;
+  }
+  .app > * { position: relative; z-index: 1; }
+
+  /* === HEADER === */
+  header {
+    padding: 22px 20px 18px;
+    border-bottom: 2px solid var(--ink);
+    background: linear-gradient(180deg, var(--parchment-deep) 0%, var(--parchment) 100%);
+    position: relative;
+  }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.25em;
+    color: var(--burgundy);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 32px;
+    line-height: 1;
+    color: var(--ink);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .header-stamps {
+    display: flex;
+    gap: 6px;
+    margin-top: 12px;
+  }
+  .stamp {
+    display: inline-block;
+    padding: 3px 9px;
+    border: 1px solid var(--pine);
+    color: var(--pine);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border-radius: 2px;
+  }
+  .stamp.filled { background: var(--pine); color: var(--parchment-light); border-color: var(--pine-deep); }
+  .stamp.burgundy { border-color: var(--burgundy); color: var(--burgundy); }
+  .stamp.gold { border-color: var(--gold); color: var(--gold-deep); background: rgba(212,180,95,0.12); }
+
+  /* Top right compass watermark */
+  .header-doodle {
+    position: absolute;
+    top: 18px;
+    right: 16px;
+    opacity: 0.10;
+    pointer-events: none;
+  }
+
+  /* === SECTIONS === */
+  section {
+    padding: 20px 20px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+  }
+  section:last-of-type { border-bottom: none; }
+
+  h2 {
+    font-family: 'EB Garamond', serif;
+    font-size: 22px;
+    color: var(--pine-deep);
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -0.005em;
+  }
+  h2 .sub {
+    display: block;
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--ink-faded);
+    font-weight: 400;
+    margin-top: 2px;
+    letter-spacing: 0.02em;
+  }
+  h3 {
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    color: var(--pine-deep);
+    margin: 12px 0 6px;
+    font-weight: 700;
+  }
+  h4 {
+    font-family: 'Lora', serif;
+    font-size: 10px;
+    color: var(--burgundy);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  p { margin-bottom: 10px; }
+  p:last-child { margin-bottom: 0; }
+  em { font-style: italic; }
+  strong { font-weight: 700; }
+  a {
+    color: var(--burgundy);
+    text-decoration: none;
+    border-bottom: 1px solid var(--burgundy-soft);
+    transition: color 0.15s;
+  }
+  a:active { color: var(--burgundy-deep); }
+  .mono { font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+
+  /* === PULL QUOTE === */
+  .pull {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink-soft);
+    line-height: 1.35;
+    border-top: 2px solid var(--ink);
+    border-bottom: 1px solid var(--rule);
+    padding: 14px 8px 14px 32px;
+    margin: 8px 0 4px;
+    position: relative;
+  }
+  .pull::before {
+    content: '"';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    font-family: 'EB Garamond', serif;
+    font-size: 48px;
+    color: var(--burgundy);
+    line-height: 1;
+  }
+
+
+  /* === SCRIPTURE === */
+  .scripture {
+    text-align: center;
+    margin-top: 16px;
+    padding: 12px 16px;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+  }
+  .scripture-text {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--pine-deep);
+    line-height: 1.45;
+  }
+  .scripture-ref {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--burgundy);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-top: 7px;
+  }
+
+  /* === RITUAL === */
+  .practice-grid {
+    background: var(--parchment-light);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 12px 14px;
+  }
+  .ritual-list {
+    list-style: none;
+  }
+  .ritual-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 9px 0;
+    border-bottom: 1px dashed var(--rule-soft);
+    cursor: pointer;
+    transition: opacity 0.2s;
+    user-select: none;
+  }
+  .ritual-list li:last-child { border-bottom: none; }
+  .ritual-list li:active { opacity: 0.6; }
+  .ritual-list li.done .ritual-name { text-decoration: line-through; opacity: 0.55; }
+  .ritual-list li.done .ritual-desc { opacity: 0.55; }
+  .ritual-num {
+    font-family: 'EB Garamond', serif;
+    font-size: 22px;
+    color: var(--burgundy);
+    line-height: 1;
+    font-weight: 700;
+    width: 26px;
+    flex-shrink: 0;
+    text-align: center;
+    padding-top: 1px;
+  }
+  .ritual-list li.done .ritual-num::after {
+    content: ' ✓';
+    color: var(--pine);
+    font-size: 16px;
+  }
+  .ritual-body { flex: 1; }
+  .ritual-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 16px;
+    color: var(--ink);
+    font-weight: 700;
+    margin-bottom: 1px;
+  }
+  .ritual-desc {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+  .ritual-time {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--burgundy);
+    white-space: nowrap;
+    padding-top: 4px;
+  }
+
+  /* === CALLOUT === */
+  .callout {
+    background: var(--parchment-light);
+    border-left: 4px solid var(--burgundy);
+    padding: 12px 14px;
+    border-radius: 0 3px 3px 0;
+    margin: 12px 0;
+  }
+  .callout.pine { border-left-color: var(--pine); }
+  .callout.gold { border-left-color: var(--gold); background: rgba(212,180,95,0.10); }
+  .callout-title {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--burgundy);
+    margin-bottom: 5px;
+  }
+  .callout.pine .callout-title { color: var(--pine-deep); }
+  .callout.gold .callout-title { color: var(--gold-deep); }
+  .callout p { font-size: 14px; margin: 0; }
+
+  /* === STREAK === */
+  .streak-row {
+    display: flex;
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .streak-cell {
+    flex: 1;
+    aspect-ratio: 1/1.15;
+    border: 1.5px solid var(--rule);
+    border-radius: 6px;
+    background: var(--parchment);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .streak-cell:active { transform: scale(0.92); }
+  .streak-cell .day {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--burgundy);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+  }
+  .streak-cell .mark {
+    font-size: 18px;
+    color: var(--rule);
+    line-height: 1;
+    margin-top: 2px;
+  }
+  .streak-cell.checked {
+    background: var(--pine);
+    border-color: var(--pine-deep);
+  }
+  .streak-cell.checked .day { color: var(--parchment-light); }
+  .streak-cell.checked .mark { color: var(--gold-bright); }
+  .streak-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--ink-faded);
+    margin-top: 9px;
+    font-style: italic;
+    text-align: center;
+  }
+
+  /* === CHORDS === */
+  .chord-row {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    padding: 6px 0 10px;
+  }
+  .chord {
+    text-align: center;
+  }
+  .chord-name {
+    font-family: 'EB Garamond', serif;
+    font-size: 22px;
+    color: var(--pine-deep);
+    font-weight: 700;
+    margin-bottom: 2px;
+  }
+  .chord-fingering {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--ink-faded);
+    margin-top: 4px;
+    letter-spacing: 0.1em;
+  }
+  .chord svg { width: 84px; height: auto; }
+
+  /* === TUNING CROSS-CHECKS === */
+  .tuning-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-top: 6px;
+  }
+  .tuning-table td {
+    padding: 5px 0;
+    border-bottom: 1px solid var(--rule-soft);
+  }
+  .tuning-table td:first-child {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+  .tuning-table td:last-child {
+    text-align: right;
+    color: var(--ink-soft);
+  }
+  .tuning-table tr.exception td {
+    color: var(--burgundy);
+    font-weight: 700;
+  }
+
+  /* === SKELETON BLOCK === */
+  .skel-block {
+    background: var(--parchment-light);
+    border-left: 3px solid var(--burgundy);
+    padding: 12px 14px;
+    border-radius: 0 3px 3px 0;
+    margin: 8px 0;
+  }
+  .skel-block .skel-label {
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 13px;
+  }
+  .skel-block .skel-meta {
+    font-style: italic;
+    color: var(--ink-faded);
+    font-size: 12px;
+  }
+  .skel-block .skel-chords {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14px;
+    color: var(--ink-soft);
+    margin: 4px 0 10px;
+    letter-spacing: 0.04em;
+  }
+  .skel-note {
+    font-style: italic;
+    font-size: 12px;
+    color: var(--ink-faded);
+    margin-top: 6px;
+  }
+
+  /* === TAKE IT FURTHER CARDS === */
+  .further-grid {
+    background: rgba(212,180,95,0.10);
+    border-left: 4px solid var(--gold);
+    padding: 14px;
+    border-radius: 0 3px 3px 0;
+  }
+  .further-item {
+    padding: 4px 0;
+  }
+  .further-item + .further-item {
+    margin-top: 10px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--rule-soft);
+  }
+  .further-title {
+    font-family: 'EB Garamond', serif;
+    font-weight: 700;
+    color: var(--pine-deep);
+    font-size: 16px;
+    margin-bottom: 1px;
+  }
+  .further-artist {
+    font-family: 'Lora', serif;
+    font-size: 11px;
+    color: var(--ink-faded);
+    margin-bottom: 5px;
+    letter-spacing: 0.04em;
+    font-style: italic;
+  }
+  .further-desc {
+    font-size: 13px;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+
+  /* === ATLAS === */
+  .atlas {
+    background: var(--parchment-light);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 6px 0;
+  }
+  .atlas-item {
+    display: block;
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--rule-soft);
+    color: var(--ink);
+    border-left: none;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .atlas-item:last-child { border-bottom: none; }
+  .atlas-item:active { background: var(--parchment-darker); }
+  .atlas-item .atlas-title {
+    font-family: 'EB Garamond', serif;
+    font-weight: 700;
+    color: var(--pine-deep);
+    font-size: 14px;
+  }
+  .atlas-item .atlas-url {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--burgundy);
+    margin-top: 2px;
+    word-break: break-all;
+  }
+
+
+  /* === STRUM PATTERN === */
+  .strum-card {
+    background: var(--parchment-light);
+    border: 1.5px solid var(--ink);
+    border-radius: 4px;
+    padding: 14px 12px 10px;
+    margin: 10px 0 4px;
+    position: relative;
+    box-shadow: 2px 3px 0 rgba(46,31,15,0.12);
+  }
+  .strum-card::before, .strum-card::after {
+    content: '';
+    position: absolute;
+    width: 10px; height: 10px;
+    border: 1.5px solid var(--ink);
+  }
+  .strum-card::before { top: -1.5px; left: -1.5px; border-right:none; border-bottom:none; }
+  .strum-card::after { bottom: -1.5px; right: -1.5px; border-left:none; border-top:none; }
+  .strum-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0 8px;
+    border-bottom: 1px dashed var(--rule);
+  }
+  .strum-col {
+    flex: 1;
+    text-align: center;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .strum-col.empty { opacity: 0.32; }
+  .strum-count {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .strum-arrow.cluster { font-size: 19px; letter-spacing: -2px; }
+  .strum-arrow {
+    font-family: 'EB Garamond', serif;
+    font-size: 30px;
+    line-height: 1;
+    color: var(--burgundy);
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
+  .strum-col.empty .strum-arrow {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    color: var(--ink-faded);
+  }
+  .strum-let {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 16px;
+    color: var(--ink-soft);
+    font-weight: 500;
+    line-height: 1;
+  }
+  .strum-legend {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 9px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--ink-faded);
+    letter-spacing: 0.04em;
+  }
+  .strum-link-hint {
+    color: var(--burgundy);
+    font-style: italic;
+    font-family: 'Lora', serif;
+    font-size: 11px;
+  }
+  .legend-dot {
+    display: inline-block;
+    color: var(--burgundy);
+    font-weight: 700;
+    margin-right: 1px;
+  }
+
+  /* === ORNAMENT === */
+  .ornament {
+    text-align: center;
+    color: var(--rule);
+    padding: 14px 0 4px;
+    letter-spacing: 0.6em;
+    font-size: 14px;
+  }
+  .closing {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink-soft);
+    text-align: center;
+    padding: 6px 14px 14px;
+    line-height: 1.4;
+  }
+  .footer-mark {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    color: var(--ink-faded);
+    letter-spacing: 0.3em;
+    text-align: center;
+    padding: 8px 0 18px;
+    text-transform: uppercase;
+  }
+
+  /* === RESET BUTTON === */
+  .reset-area {
+    text-align: center;
+    padding: 14px 20px 8px;
+  }
+  .reset-btn {
+    background: transparent;
+    border: 1px solid var(--rule);
+    color: var(--ink-faded);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    padding: 7px 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .reset-btn:active { background: var(--parchment-deep); }
+
+  /* === TOAST === */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%) translateY(160%);
+    background: var(--pine-deep);
+    color: var(--gold-bright);
+    padding: 11px 22px;
+    border-radius: 22px;
+    font-family: 'Lora', serif;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    z-index: 100;
+    transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+    white-space: nowrap;
+    max-width: 90vw;
+  }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+
+  /* === SEAL CSS === */
+  .seal-inline { vertical-align: middle; margin-right: 4px; }
+
+  @media (min-width: 480px) {
+    body { padding: 30px 0; }
+    .app { border-radius: 14px; min-height: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="app">
+
+  <header>
+    <div class="header-doodle">
+      <svg width="64" height="64" viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="28" fill="none" stroke="#2E1F0F" stroke-width="0.8"/>
+        <circle cx="32" cy="32" r="22" fill="none" stroke="#2E1F0F" stroke-width="0.4" stroke-dasharray="1.5,1.5"/>
+        <path d="M 32 4 L 35 32 L 32 60 L 29 32 Z" fill="#2E1F0F"/>
+        <path d="M 4 32 L 32 35 L 60 32 L 32 29 Z" fill="#2E1F0F" opacity="0.7"/>
+      </svg>
+    </div>
+    <div class="eyebrow">— Quest Card · Lesson 0 → I —</div>
+    <h1>Tristan,<br>your first quest.</h1>
+    <div class="header-stamps">
+      <span class="stamp filled">Camper</span>
+      <span class="stamp">Lvl I</span>
+    </div>
+  </header>
+
+  <section>
+    <div class="pull">
+      Between now and our first real lesson — ten minutes a day, five to seven days. That's it. Show up. Even five minutes counts.
+    </div>
+    <div class="scripture">
+      <div class="scripture-text">"Enter into his gates with thanksgiving, and into his courts with praise: be thankful unto him, and bless his name."</div>
+      <div class="scripture-ref">— Psalm 100:4 · KJV</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why ten minutes</h2>
+    <p><strong>Georges St-Pierre</strong> — UFC welterweight champion. One of his core principles: he trained at an intensity he could <em>sustain</em>, so he could come back the next day. Not crushing one session and burning out. <strong>Returning. Daily.</strong></p>
+    <p>That's our model. Ten minutes today beats sixty minutes on Saturday. Every time. The hand learns through return. The ear learns through return. <strong>Daily contact beats occasional intensity.</strong></p>
+  </section>
+
+  <section>
+    <h2>The Daily Ritual <span class="stamp burgundy" style="font-size:9px; margin-left:6px;">+10 touch · +40 lane = +50 / day</span></h2>
+    <p style="font-size:12px; color:var(--ink-faded); font-style:italic; margin-bottom:8px;">Tap each step to mark it done today.</p>
+    <div class="practice-grid">
+      <ul class="ritual-list" id="ritual-list">
+        <li data-step="1">
+          <div class="ritual-num">I</div>
+          <div class="ritual-body">
+            <div class="ritual-name">Tune up</div>
+            <div class="ritual-desc">Use your tuner. Low to high: <strong>E A D G B E</strong>. Cross-check with the 5th-fret rule (see Field Notes below).</div>
+          </div>
+          <div class="ritual-time">~1 min</div>
+        </li>
+        <li data-step="2">
+          <div class="ritual-num">II</div>
+          <div class="ritual-body">
+            <div class="ritual-name">Warmup walk</div>
+            <div class="ritual-desc">Low E string. Frets 1·2·3·4 with fingers 1·2·3·4. Slow, clean, no buzz. Then A string. Down and back.</div>
+          </div>
+          <div class="ritual-time">~1 min</div>
+        </li>
+        <li data-step="3">
+          <div class="ritual-num">III</div>
+          <div class="ritual-body">
+            <div class="ritual-name">The Anchor Chords</div>
+            <div class="ritual-desc"><strong>C → Em</strong> (twenty times — your middle finger stays anchored).<br><strong>Em → C → G → C.</strong> One downstroke per chord. No rush.</div>
+          </div>
+          <div class="ritual-time">~4 min</div>
+        </li>
+        <li data-step="4">
+          <div class="ritual-num">IV</div>
+          <div class="ritual-body">
+            <div class="ritual-name">Song touch — Reckless Love</div>
+            <div class="ritual-desc">Simplified verse: <span class="mono">Em — C — G</span> (the real song uses D too — that unlocks at Lesson II). Twice through. Hear the melody in your head while you play.</div>
+          </div>
+          <div class="ritual-time">~2 min</div>
+        </li>
+        <li data-step="5">
+          <div class="ritual-num">V</div>
+          <div class="ritual-body">
+            <div class="ritual-name">Riff Lab — Skill Building</div>
+            <div class="ritual-desc">Single-string finger exercise on the G string. Frets <span class="mono">7 — 5 — 3 — 5 — 7 — 5 — 3</span>. Fingers <span class="mono">2 — 1 — 4 — 1 — 2 — 1 — 4</span>. Slow and clean — builds single-string fluency and finger independence.</div>
+          </div>
+          <div class="ritual-time">~2 min</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="callout pine">
+      <div class="callout-title">A Note on Streaks &amp; The Return</div>
+      <p>Streaks celebrate consistency — they don't measure your worth. If a day or a week passes without the guitar, the move is simple: <strong>show up today.</strong> Yesterday is closed. Today is open. Music becomes part of life the way meals do — you don't shame yourself for skipping breakfast; you eat lunch. Same here.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>This Week's Streak <span class="sub">Tap a day when you've touched the strings</span></h2>
+    <div class="streak-row" id="streak-row">
+      <div class="streak-cell" data-day="mon"><span class="day">MON</span><span class="mark">○</span></div>
+      <div class="streak-cell" data-day="tue"><span class="day">TUE</span><span class="mark">○</span></div>
+      <div class="streak-cell" data-day="wed"><span class="day">WED</span><span class="mark">○</span></div>
+      <div class="streak-cell" data-day="thu"><span class="day">THU</span><span class="mark">○</span></div>
+      <div class="streak-cell" data-day="fri"><span class="day">FRI</span><span class="mark">○</span></div>
+      <div class="streak-cell" data-day="sat"><span class="day">SAT</span><span class="mark">○</span></div>
+      <div class="streak-cell" data-day="sun"><span class="day">SUN</span><span class="mark">○</span></div>
+    </div>
+    <div class="streak-meta">5 full Quest days = +50 XP &nbsp;·&nbsp; 7-day streak = +50 XP &nbsp;·&nbsp; even 5 min = Daily Touch</div>
+  </section>
+
+  <section>
+    <h2>The Three Anchor Chords</h2>
+    <p style="font-size:14px;">Start with these three. The fourth — <strong>D</strong> — unlocks at Lesson II. Three is enough. <em>Three is a song.</em></p>
+    <div class="chord-row">
+      <div class="chord">
+        <div class="chord-name">G</div>
+        <svg viewBox="0 0 84 110" xmlns="http://www.w3.org/2000/svg">
+          <rect x="11" y="17" width="62" height="80" fill="#E5D5A8" stroke="#1F3829" stroke-width="1.5"/>
+          <line x1="11" y1="37" x2="73" y2="37" stroke="#6B7B6E" stroke-width="0.5"/>
+          <line x1="11" y1="57" x2="73" y2="57" stroke="#6B7B6E" stroke-width="0.5"/>
+          <line x1="11" y1="77" x2="73" y2="77" stroke="#6B7B6E" stroke-width="0.5"/>
+          <line x1="22" y1="17" x2="22" y2="97" stroke="#5A4423" stroke-width="0.5"/>
+          <line x1="32" y1="17" x2="32" y2="97" stroke="#5A4423" stroke-width="0.5"/>
+          <line x1="42" y1="17" x2="42" y2="97" stroke="#5A4423" stroke-width="0.5"/>
+          <line x1="52" y1="17" x2="52" y2="97" stroke="#5A4423" stroke-width="0.5"/>
+          <line x1="62" y1="17" x2="62" y2="97" stroke="#5A4423" stroke-width="0.5"/>
+          <rect x="11" y="14" width="62" height="4" fill="#2E1F0F"/>
+          <circle cx="22" cy="67" r="6" fill="#1F3829"/>
+          <text x="22" y="70" font-family="Lora" font-size="8" fill="#F4EAD0" text-anchor="middle" font-weight="700">3</text>
+          <circle cx="32" cy="47" r="6" fill="#1F3829"/>
+          <text x="32" y="50" font-family="Lora" font-size="8" fill="#F4EAD0" text-anchor="middle" font-weight="700">2</text>
+          <circle cx="62" cy="67" r="6" fill="#1F3829"/>
+          <text x="62" y="70" font-family="Lora" font-size="8" fill="#F4EAD0" text-anchor="middle" font-weight="700">4</text>
+          <text x="42" y="11" font-family="Lora" font-size="8" text-anchor="middle" fill="#5A4423">O</text>
+          <text x="52" y="11" font-family="Lora" font-size="8" text-anchor="middle" fill="#5A4423">O</text>
+          <text x="22" y="107" font-family="JetBrains Mono" font-size="6" text-anchor="middle" fill="#8A7048">E</text>
+          <text x="32" y="107" font-family="JetBrains Mono" font-size="6" text-anchor="middle" fill="#8A7048">A</text>
+          <text x="42" y="107" font-family="JetBrains Mono" font-size="6" text-anchor="middle" fill="#8A7048">D</text>
+          <text x="52" y="107" font-family="JetBrains Mono" font-size="6" text-anchor="middle" fill="#8A7048">G</text>
+          <text x="62" y="107" font-family="JetBrains Mono" font-size="6" text-anchor="middle" fill="#8A7048">B</text>
+          <text x="72" y="107" font-family="JetBrains Mono" font-size="6" text-anchor="middle" fill="#8A7048">e</text>
+        </svg>
+        <div class="chord-fingering">3 2 0 0 0 3</div>
+      </div>
+      <div class="chord">
+        <div class="chord-name">Em</div>
+        <svg viewBox="0 0 84 110" xmlns="http://www.w3.org/2000/svg">
+          <rect x="11" y="17" width="62" height="80" fill="#E5D5A8" stroke="#1F3829" stroke-width="1.5"/>
+          <line x1="11" y1="37" x2="73" y2="37" stroke="#6B7B6E" stroke-width="0.5"/>
+          <line x1="11" y1="57" x2="73" y2="57" stroke="#6B7B6E" stroke-width="0.5"/>
+          <line x1="11" y1="77" x2="73" y2="77" stroke="#6B7B6E" stroke-width="0.5"/>
+          <line x1="22" y1="17" x2="22" y2="97" stroke="#5A4423" stroke-width="0.5"/>
+          <line x1="32" y1="17" x2="32" y2="97" stroke="#5A4423" stroke-width="0.5"/>
+          <line x1="42" y1="17" x2="42" y2="97" stroke="#5A4423" stroke-width="0.5"/>
+          <line x1="52" y1="17" x2="52" y2="97" stroke="#5A4423" stroke-width="0.5"/>
+          <line x1="62" y1="17" x2="62" y2="97" stroke="#5A4423" stroke-width="0.5"/>
+          <rect x="11" y="14" width="62" height="4" fill="#2E1F0F"/>
+          <circle cx="32" cy="47" r="6" fill="#1F3829"/>
+          <text x="32" y="50" font-family="Lora" font-size="8" fill="#F4EAD0" text-anchor="middle" font-weight="700">1</text>
+          <circle cx="42" cy="47" r="6" fill="#1F3829"/>
+          <text x="42" y="50" font-family="Lora" font-size="8" fill="#F4EAD0" text-anchor="middle" font-weight="700">2</text>
+          <text x="22" y="11" font-family="Lora" font-size="8" text-anchor="middle" fill="#5A4423">O</text>
+          <text x="52" y="11" font-family="Lora" font-size="8" text-anchor="middle" fill="#5A4423">O</text>
+          <text x="62" y="11" font-family="Lora" font-size="8" text-anchor="middle" fill="#5A4423">O</text>
+          <text x="72" y="11" font-family="Lora" font-size="8" text-anchor="middle" fill="#5A4423">O</text>
+          <text x="22" y="107" font-family="JetBrains Mono" font-size="6" text-anchor="middle" fill="#8A7048">E</text>
+          <text x="32" y="107" font-family="JetBrains Mono" font-size="6" text-anchor="middle" fill="#8A7048">A</text>
+          <text x="42" y="107" font-family="JetBrains Mono" font-size="6" text-anchor="middle" fill="#8A7048">D</text>
+          <text x="52" y="107" font-family="JetBrains Mono" font-size="6" text-anchor="middle" fill="#8A7048">G</text>
+          <text x="62" y="107" font-family="JetBrains Mono" font-size="6" text-anchor="middle" fill="#8A7048">B</text>
+          <text x="72" y="107" font-family="JetBrains Mono" font-size="6" text-anchor="middle" fill="#8A7048">e</text>
+        </svg>
+        <div class="chord-fingering">0 2 2 0 0 0</div>
+      </div>
+      <div class="chord">
+        <div class="chord-name">C</div>
+        <svg viewBox="0 0 84 110" xmlns="http://www.w3.org/2000/svg">
+          <rect x="11" y="17" width="62" height="80" fill="#E5D5A8" stroke="#1F3829" stroke-width="1.5"/>
+          <line x1="11" y1="37" x2="73" y2="37" stroke="#6B7B6E" stroke-width="0.5"/>
+          <line x1="11" y1="57" x2="73" y2="57" stroke="#6B7B6E" stroke-width="0.5"/>
+          <line x1="11" y1="77" x2="73" y2="77" stroke="#6B7B6E" stroke-width="0.5"/>
+          <line x1="22" y1="17" x2="22" y2="97" stroke="#5A4423" stroke-width="0.5"/>
+          <line x1="32" y1="17" x2="32" y2="97" stroke="#5A4423" stroke-width="0.5"/>
+          <line x1="42" y1="17" x2="42" y2="97" stroke="#5A4423" stroke-width="0.5"/>
+          <line x1="52" y1="17" x2="52" y2="97" stroke="#5A4423" stroke-width="0.5"/>
+          <line x1="62" y1="17" x2="62" y2="97" stroke="#5A4423" stroke-width="0.5"/>
+          <rect x="11" y="14" width="62" height="4" fill="#2E1F0F"/>
+          <circle cx="32" cy="67" r="6" fill="#1F3829"/>
+          <text x="32" y="70" font-family="Lora" font-size="8" fill="#F4EAD0" text-anchor="middle" font-weight="700">3</text>
+          <circle cx="42" cy="47" r="6" fill="#1F3829"/>
+          <text x="42" y="50" font-family="Lora" font-size="8" fill="#F4EAD0" text-anchor="middle" font-weight="700">2</text>
+          <circle cx="62" cy="27" r="6" fill="#1F3829"/>
+          <text x="62" y="30" font-family="Lora" font-size="8" fill="#F4EAD0" text-anchor="middle" font-weight="700">1</text>
+          <text x="22" y="11" font-family="Lora" font-size="9" text-anchor="middle" fill="#7A2E1E" font-weight="700">×</text>
+          <text x="52" y="11" font-family="Lora" font-size="8" text-anchor="middle" fill="#5A4423">O</text>
+          <text x="72" y="11" font-family="Lora" font-size="8" text-anchor="middle" fill="#5A4423">O</text>
+          <text x="22" y="107" font-family="JetBrains Mono" font-size="6" text-anchor="middle" fill="#8A7048">E</text>
+          <text x="32" y="107" font-family="JetBrains Mono" font-size="6" text-anchor="middle" fill="#8A7048">A</text>
+          <text x="42" y="107" font-family="JetBrains Mono" font-size="6" text-anchor="middle" fill="#8A7048">D</text>
+          <text x="52" y="107" font-family="JetBrains Mono" font-size="6" text-anchor="middle" fill="#8A7048">G</text>
+          <text x="62" y="107" font-family="JetBrains Mono" font-size="6" text-anchor="middle" fill="#8A7048">B</text>
+          <text x="72" y="107" font-family="JetBrains Mono" font-size="6" text-anchor="middle" fill="#8A7048">e</text>
+        </svg>
+        <div class="chord-fingering">× 3 2 0 1 0</div>
+      </div>
+    </div>
+    <div class="callout">
+      <div class="callout-title">The Anchor Trick · C ↔ Em</div>
+      <p>For C → Em: <strong>your middle finger doesn't move at all.</strong> It stays planted on the D string, fret 2. The ring finger lifts off, the index slides over to the A string. That single anchored finger is your pivot — the easiest chord change you'll learn. Start here.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The Tuning Side Quest ⚙ <span class="stamp burgundy" style="font-size:9px; margin-left:4px;">+50 XP · earned in Lesson</span></h2>
+    <h4 style="margin-top: 8px;">String names · low to high</h4>
+    <div style="font-family:'EB Garamond',serif; font-size:18px; color:var(--pine-deep); font-weight:700; margin-bottom: 2px;">E A D G B E</div>
+    <div style="font-size:13px; font-style:italic; color:var(--ink-soft); margin-bottom: 12px;">"Eddie Ate Dynamite, Good Bye Eddie."</div>
+    <h4>The 5th-fret rule</h4>
+    <p style="font-size:14px;">The 5th fret of any string sounds the same as the open string above it. <em>Exception:</em> the G string uses the <strong>4th fret</strong> to match the open B.</p>
+    <h4 style="margin-top:10px;">By-ear cross-checks</h4>
+    <table class="tuning-table">
+      <tr><td>E string · fret 5</td><td>= open A</td></tr>
+      <tr><td>A string · fret 5</td><td>= open D</td></tr>
+      <tr><td>D string · fret 5</td><td>= open G</td></tr>
+      <tr class="exception"><td>G string · fret 4</td><td>= open B  ←</td></tr>
+      <tr><td>B string · fret 5</td><td>= open e</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>The Reckless Love Skeleton</h2>
+    <div class="skel-block">
+      <div class="skel-label">Simplified verse <span class="skel-meta">(no D yet — three anchors only)</span></div>
+      <div class="skel-chords">Em — C — G — G</div>
+      <div class="skel-label">Simplified chorus <span class="skel-meta">(Oh, the overwhelming…)</span></div>
+      <div class="skel-chords">G — Em — C — C</div>
+    </div>
+    <div class="skel-note">The actual song is <strong>Em — D — C — G.</strong> We're skipping D for now and lingering on the three anchor chords instead. <strong>Tuning:</strong> E A D G B E · <strong>Key:</strong> C♯m · <strong>No capo.</strong> D unlocks at Lesson II.</div>
+
+    <h3 style="margin-top: 16px;">The Strum Pattern</h3>
+    <p style="font-size:14px;">Once the chord shapes feel grounded, layer the rhythm in. Eight counts per bar — listen for the song's pulse and let your strumming hand find it.</p>
+
+    <a href="https://www.youtube.com/watch?v=GrgpHRzz6X8" target="_blank" rel="noopener" style="text-decoration:none; border:none; display:block;">
+      <div class="strum-card">
+        <div class="strum-grid">
+          <div class="strum-col"><div class="strum-count">1</div><div class="strum-arrow">↓</div><div class="strum-let">d</div></div>
+          <div class="strum-col empty"><div class="strum-count">2</div><div class="strum-arrow">·</div><div class="strum-let">–</div></div>
+          <div class="strum-col"><div class="strum-count">3</div><div class="strum-arrow cluster">↑↓↑</div><div class="strum-let">udu</div></div>
+          <div class="strum-col empty"><div class="strum-count">4</div><div class="strum-arrow">·</div><div class="strum-let">–</div></div>
+          <div class="strum-col empty"><div class="strum-count">5</div><div class="strum-arrow">·</div><div class="strum-let">–</div></div>
+          <div class="strum-col"><div class="strum-count">6</div><div class="strum-arrow cluster">↑↓↑</div><div class="strum-let">udu</div></div>
+        </div>
+        <div class="strum-legend">
+          <span><span class="legend-dot">↓</span> down &nbsp; <span class="legend-dot">↑</span> up &nbsp; <span class="legend-dot">–</span> rest &nbsp;·&nbsp; 6 counts/bar</span>
+          <span class="strum-link-hint">▸ tap for video lesson</span>
+        </div>
+      </div>
+    </a>
+
+    <div class="callout gold" style="margin-top: 12px;">
+      <div class="callout-title">⌁ &nbsp; The Mute Drill</div>
+      <p>As you get comfortable with the chord changes, dive into the rhythm separately. <strong>Rest your fretting hand lightly across the strings — no chord, just muting.</strong> Now practice the strum pattern alone, hearing the percussive <em>chunk-chunk</em>. Your strumming hand learns the groove without your fretting hand competing for attention. Then bring them back together.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Taking It Further 🚀 <span class="stamp gold" style="font-size:9px; margin-left:4px;">earned in Lesson</span></h2>
+    <div class="further-grid">
+      <div class="further-item">
+        <div class="further-title">⚡ Take It All Back <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--burgundy); font-weight:700; margin-left:4px;">+150</span></div>
+        <div class="further-artist">Tauren Wells &amp; Skillet · Lesson IV unlock</div>
+        <div class="further-desc">Simple power-chord version — <strong>standard tuning, no down-tuning required.</strong> We'll begin power chords together at Lesson I. Listen this week and get the song in your bones. <a href="https://tabs.ultimate-guitar.com/tab/tauren-wells/take-it-all-back-chords-4921888">Chord chart on Ultimate Guitar →</a></div>
+      </div>
+      <div class="further-item">
+        <div class="further-title">📐 The C or G Scale <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:var(--burgundy); font-weight:700; margin-left:4px;">+75</span></div>
+        <div class="further-artist">60 bpm metronome reps · warmup extended</div>
+        <div class="further-desc">Pick the <strong>C major</strong> or <strong>G major</strong> scale. Walk it slowly, then backwards, then locked to a <strong>60 bpm metronome</strong>. <a href="https://truefire.com/learning-tools">Scale tools at TrueFire →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Boss Battle <span style="color:var(--burgundy);">⚔</span> <span class="stamp gold" style="font-size:9px; margin-left:4px;">+250 XP</span></h2>
+    <div class="callout pine">
+      <div class="callout-title">⚔ &nbsp; The Teacher's Tuning Challenge</div>
+      <p>At Lesson I's opening, H will detune your strings in three rounds: one off, then two, then three (using the 5th-fret rule). You retune by ear and rule. Practice this side quest at home so you're ready. <strong>Reward:</strong> 🔧 The Tuner badge + 250 XP.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The Apprentice's Atlas <span class="sub">Tap any resource to open it</span></h2>
+    <div class="atlas">
+      <a class="atlas-item" href="https://www.theworshipinitiative.com/songs/reckless-love" target="_blank" rel="noopener">
+        <div class="atlas-title">Reckless Love · Worship Initiative</div>
+        <div class="atlas-url">theworshipinitiative.com/songs/reckless-love</div>
+      </a>
+      <a class="atlas-item" href="https://www.songsterr.com/a/wa/bestMatchForQuery?s=reckless+love" target="_blank" rel="noopener">
+        <div class="atlas-title">Reckless Love · Songsterr (interactive)</div>
+        <div class="atlas-url">songsterr.com · reckless love</div>
+      </a>
+      <a class="atlas-item" href="https://www.ultimate-guitar.com/search.php?search_type=title&value=reckless+love" target="_blank" rel="noopener">
+        <div class="atlas-title">Reckless Love · Ultimate Guitar</div>
+        <div class="atlas-url">ultimate-guitar.com · reckless love</div>
+      </a>
+      <a class="atlas-item" href="https://open.spotify.com/search/reckless%20love%20cory%20asbury" target="_blank" rel="noopener">
+        <div class="atlas-title">Reckless Love · Spotify (listen)</div>
+        <div class="atlas-url">spotify · reckless love · cory asbury</div>
+      </a>
+      <a class="atlas-item" href="https://tabs.ultimate-guitar.com/tab/tauren-wells/take-it-all-back-chords-4921888" target="_blank" rel="noopener">
+        <div class="atlas-title">Take It All Back · chords (Ultimate Guitar)</div>
+        <div class="atlas-url">ultimate-guitar.com · take it all back chords</div>
+      </a>
+      <a class="atlas-item" href="https://www.youtube.com/watch?v=9uDDvpkCbeY" target="_blank" rel="noopener">
+        <div class="atlas-title">Take It All Back · listen (feat. Skillet)</div>
+        <div class="atlas-url">youtube · tauren wells feat. skillet</div>
+      </a>
+      <a class="atlas-item" href="https://truefire.com/learning-tools" target="_blank" rel="noopener">
+        <div class="atlas-title">TrueFire · scales · chords · tuner · metronome</div>
+        <div class="atlas-url">truefire.com/learning-tools</div>
+      </a>
+      <a class="atlas-item" href="https://yousician.com/guitartuna" target="_blank" rel="noopener">
+        <div class="atlas-title">GuitarTuna · phone tuner</div>
+        <div class="atlas-url">yousician.com/guitartuna</div>
+      </a>
+    </div>
+  </section>
+
+  <div class="ornament">✦ &nbsp; ✦ &nbsp; ✦</div>
+  <div class="closing">"Show up tomorrow. Even for five minutes. Especially for five minutes."</div>
+
+  <div class="reset-area">
+    <button class="reset-btn" onclick="resetWeek()">Reset This Week</button>
+  </div>
+
+  <div class="footer-mark">— Guitar Quest · Quest Card · 0 → I —</div>
+
+</div>
+
+<div class="toast" id="toast">Saved</div>
+
+<script>
+  // Use a date-keyed namespace so streaks naturally reset weekly
+  function getWeekKey() {
+    const now = new Date();
+    const start = new Date(now.getFullYear(), 0, 1);
+    const diff = (now - start) / 86400000;
+    const week = Math.floor((diff + start.getDay()) / 7);
+    return `gq:tristan:w${now.getFullYear()}-${week}`;
+  }
+  const WEEK_KEY = getWeekKey();
+  const RITUAL_KEY = `gq:tristan:ritual:${new Date().toDateString()}`;
+
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(window._toastTimer);
+    window._toastTimer = setTimeout(() => t.classList.remove('show'), 1800);
+  }
+
+  // Streak persistence (localStorage)
+  function loadStreak() {
+    try {
+      const data = JSON.parse(localStorage.getItem(WEEK_KEY) || '{}');
+      document.querySelectorAll('#streak-row .streak-cell').forEach(cell => {
+        const day = cell.dataset.day;
+        if (data[day]) {
+          cell.classList.add('checked');
+          cell.querySelector('.mark').textContent = '✓';
+        }
+      });
+    } catch(e) {}
+  }
+  function saveStreakDay(day, checked) {
+    try {
+      const data = JSON.parse(localStorage.getItem(WEEK_KEY) || '{}');
+      if (checked) data[day] = true;
+      else delete data[day];
+      localStorage.setItem(WEEK_KEY, JSON.stringify(data));
+    } catch(e) {}
+  }
+  document.querySelectorAll('#streak-row .streak-cell').forEach(cell => {
+    cell.addEventListener('click', () => {
+      const day = cell.dataset.day;
+      if (cell.classList.contains('checked')) {
+        cell.classList.remove('checked');
+        cell.querySelector('.mark').textContent = '○';
+        saveStreakDay(day, false);
+      } else {
+        cell.classList.add('checked');
+        cell.querySelector('.mark').textContent = '✓';
+        saveStreakDay(day, true);
+        showToast('+10 XP · Day logged 🌱');
+      }
+    });
+  });
+
+  // Ritual checkboxes persistence (per-day)
+  function loadRitual() {
+    try {
+      const data = JSON.parse(localStorage.getItem(RITUAL_KEY) || '{}');
+      document.querySelectorAll('#ritual-list li').forEach(li => {
+        const step = li.dataset.step;
+        if (data[step]) li.classList.add('done');
+      });
+    } catch(e) {}
+  }
+  function saveRitualStep(step, done) {
+    try {
+      const data = JSON.parse(localStorage.getItem(RITUAL_KEY) || '{}');
+      if (done) data[step] = true;
+      else delete data[step];
+      localStorage.setItem(RITUAL_KEY, JSON.stringify(data));
+    } catch(e) {}
+  }
+  document.querySelectorAll('#ritual-list li').forEach(li => {
+    li.addEventListener('click', () => {
+      const step = li.dataset.step;
+      if (li.classList.contains('done')) {
+        li.classList.remove('done');
+        saveRitualStep(step, false);
+      } else {
+        li.classList.add('done');
+        saveRitualStep(step, true);
+      }
+    });
+  });
+
+  function resetWeek() {
+    if (confirm('Reset this week\'s streak and today\'s ritual?')) {
+      try {
+        localStorage.removeItem(WEEK_KEY);
+        localStorage.removeItem(RITUAL_KEY);
+      } catch(e) {}
+      document.querySelectorAll('#streak-row .streak-cell').forEach(cell => {
+        cell.classList.remove('checked');
+        cell.querySelector('.mark').textContent = '○';
+      });
+      document.querySelectorAll('#ritual-list li').forEach(li => li.classList.remove('done'));
+      showToast('Reset — fresh start');
+    }
+  }
+
+  loadStreak();
+  loadRitual();
+</script>
+
+</body>
+</html>
